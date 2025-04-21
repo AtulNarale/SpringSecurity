@@ -41,24 +41,7 @@ public class SecurityConfiguration {
               .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
               .build();
     }
-
-//    @Bean
-//    public UserDetailsService userDetailsService(){
-//        UserDetails  normalUser = User.builder()
-//                .username("GC")
-//                .password("$2a$12$peBLz.CFO/4qVkRX3UHh6OTVEgcpqKdTOKn0nSoyE7N0yPb.swY.6")
-//                .roles("USER")
-//                .build();
-//
-//        UserDetails  adminUser = User.builder()
-//                .username("admin")
-//                .password("$2a$12$LbMhZG5VyLbRU2zCrsrejeSBe.emq4DnYFix4z0dVYKOvR21PodfW")
-//                .roles("ADMIN","USER")
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(normalUser,adminUser);
-//    }
-
+    
     @Bean
     public UserDetailsService userDetailsService(){
         return userDetailservice;
